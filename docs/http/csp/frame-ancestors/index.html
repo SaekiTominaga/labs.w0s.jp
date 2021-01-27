@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>CSP: frame-ancestors Demo</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			iframe,
+			object,
+			embed {
+				border: 1px solid #000;
+				display: block;
+				height: 6em;
+			}
+
+			iframe,
+			object[type^='text/'],
+			embed[type^='text/'] {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSP: frame-ancestors Demo</h1>
+
+		<section>
+			<h2>&lt;iframe&gt;</h2>
+
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<p><iframe src="self.html?iframe"></iframe></p>
+			</section>
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<p><iframe src="none.html?iframe"></iframe></p>
+			</section>
+		</section>
+
+		<section>
+			<h2>&lt;object type="text/html"&gt;</h2>
+
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<p><object data="self.html?object" type="text/html"></object></p>
+			</section>
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<p><object data="none.html?object" type="text/html"></object></p>
+			</section>
+		</section>
+
+		<section>
+			<h2>&lt;object type="image/png"&gt;</h2>
+
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<p><object data="self.png?object" type="image/png"></object></p>
+			</section>
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<p><object data="none.png?object" type="image/png"></object></p>
+			</section>
+		</section>
+
+		<section>
+			<h2>&lt;embed type="text/html"&gt;</h2>
+
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<p><embed src="self.html?embed" type="text/html" /></p>
+			</section>
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<p><embed src="none.html?embed" type="text/html" /></p>
+			</section>
+		</section>
+
+		<section>
+			<h2>&lt;embed type="image/png"&gt;</h2>
+
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<p><embed src="self.png?embed" type="image/png" /></p>
+			</section>
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<p><embed src="none.png?embed" type="image/png" /></p>
+			</section>
+		</section>
+
+		<section>
+			<h2>&lt;img&gt;</h2>
+
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<p><img src="self.png?img" alt="" /></p>
+			</section>
+			<section>
+				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<p><img src="none.png?img" alt="" /></p>
+			</section>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../../">Back</a></p>
+		</footer>
+	</body>
+</html>

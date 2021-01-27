@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Referrer Policy Demo</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<link rel="stylesheet" href="notset/notset.css" />
+		<link rel="stylesheet" href="no-referrer/no-referrer.css" />
+		<link rel="stylesheet" href="no-referrer-when-downgrade/no-referrer-when-downgrade.css" />
+		<link rel="stylesheet" href="same-origin/same-origin.css" />
+		<link rel="stylesheet" href="origin/origin.css" />
+		<link rel="stylesheet" href="strict-origin/strict-origin.css" />
+		<link rel="stylesheet" href="origin-when-cross-origin/origin-when-cross-origin.css" />
+		<link rel="stylesheet" href="strict-origin-when-cross-origin/strict-origin-when-cross-origin.css" />
+		<link rel="stylesheet" href="unsafe-url/unsafe-url.css" />
+		<script src="fetch.js"></script>
+	</head>
+	<body>
+		<h1>Referrer Policy Demo</h1>
+
+		<p><a href="https://www.w3.org/TR/referrer-policy/">Specification</a></p>
+
+		<nav>
+			<section>
+				<h2>Not Set</h2>
+				<ul>
+					<li class="notset"><a href="notset/">Not Set</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>HTTP header</h2>
+				<p>e.g. <samp>Referrer-Policy: no-referrer</samp></p>
+				<ul>
+					<li class="no-referrer"><a href="no-referrer/">no-referrer</a></li>
+					<li class="no-referrer-when-downgrade"><a href="no-referrer-when-downgrade/">no-referrer-when-downgrade</a> (default)</li>
+					<li class="same-origin"><a href="same-origin/">same-origin</a></li>
+					<li class="origin"><a href="origin/">origin</a></li>
+					<li class="strict-origin"><a href="strict-origin/">strict-origin</a></li>
+					<li class="origin-when-cross-origin"><a href="origin-when-cross-origin/">origin-when-cross-origin</a></li>
+					<li class="strict-origin-when-cross-origin"><a href="strict-origin-when-cross-origin/">strict-origin-when-cross-origin</a> (Chrome 85+ default)</li>
+					<li class="unsafe-url"><a href="unsafe-url/">unsafe-url</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>&lt;meta&gt; element</h2>
+				<p>e.g. <code>&lt;meta name="referrer" content="no-referrer"/&gt;</code></p>
+				<ul>
+					<li class="no-referrer"><a href="no-referrer_meta/">no-referrer</a></li>
+					<li class="no-referrer-when-downgrade"><a href="no-referrer-when-downgrade_meta/">no-referrer-when-downgrade</a> (default)</li>
+					<li class="same-origin"><a href="same-origin_meta/">same-origin</a></li>
+					<li class="origin"><a href="origin_meta/">origin</a></li>
+					<li class="strict-origin"><a href="strict-origin_meta/">strict-origin</a></li>
+					<li class="origin-when-cross-origin"><a href="origin-when-cross-origin_meta/">origin-when-cross-origin</a></li>
+					<li class="strict-origin-when-cross-origin">
+						<a href="strict-origin-when-cross-origin_meta/">strict-origin-when-cross-origin</a> (Chrome 85+ default)
+					</li>
+					<li class="unsafe-url"><a href="unsafe-url_meta/">unsafe-url</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>&lt;meta&gt; element (<a href="https://wiki.whatwg.org/wiki/Meta_referrer">older draft</a>)</h2>
+				<p>e.g. <code>&lt;meta name="referrer" content="never"/&gt;</code></p>
+				<ul>
+					<li><a href="never_meta/">never</a> (no-referrer)</li>
+					<li><a href="default_meta/">default</a> (no-referrer-when-downgrade)</li>
+					<li><a href="origin_meta/">origin</a></li>
+					<li><a href="always_meta/">always</a> (unsafe-url)</li>
+				</ul>
+			</section>
+		</nav>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

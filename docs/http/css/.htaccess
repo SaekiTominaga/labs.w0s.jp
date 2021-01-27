@@ -1,0 +1,5 @@
+# mod_headers
+Header add Link "<common.css>;rel=stylesheet"
+Header add Link "<print.css>;rel=stylesheet;media=print"
+Header add Link "<light.css>;rel=stylesheet;title=Light mode"
+Header add Link "<dark.css>;rel=alternate stylesheet;title=Dark mode"

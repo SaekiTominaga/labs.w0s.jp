@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>CSS Explicit Defaulting (initial / inherit / unset / revert)</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			body > section > p {
+				color: #e00;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS Explicit Defaulting (initial / inherit / unset / revert)</h1>
+
+		<p><a href="https://drafts.csswg.org/css-cascade/#defaulting-keywords">Specification</a></p>
+
+		<section>
+			<h2>initial</h2>
+
+			<p>text <strong style="all: initial;">"all: initial"</strong> text</p>
+		</section>
+
+		<section>
+			<h2>inherit</h2>
+
+			<p>text <strong style="all: inherit;">"all: inherit"</strong> text</p>
+		</section>
+
+		<section>
+			<h2>unset</h2>
+
+			<p>text <strong style="all: unset;">"all: unset"</strong> text</p>
+		</section>
+
+		<section>
+			<h2>revert</h2>
+
+			<p>text <strong style="all: revert;">"all: revert"</strong> text</p>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

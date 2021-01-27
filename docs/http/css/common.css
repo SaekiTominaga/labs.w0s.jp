@@ -1,0 +1,7 @@
+.sample.-support {
+	display: block !important;
+}
+
+.sample.-nosupport {
+	display: none;
+}

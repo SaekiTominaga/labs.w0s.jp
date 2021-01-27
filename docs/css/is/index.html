@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>:is() Pseudo-classes</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			.is :is(ol, ul) {
+				list-style: square;
+				color: #e00;
+				background: fff;
+			}
+
+			.matches :matches(ol, ul) {
+				list-style: square;
+				color: #e00;
+				background: fff;
+			}
+
+			.webkit-any :-webkit-any(ol, ul) {
+				list-style: square;
+				color: #e00;
+				background: fff;
+			}
+
+			.moz-any :-moz-any(ol, ul) {
+				list-style: square;
+				color: #e00;
+				background: fff;
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				try {
+					document.querySelector('.is :is(ol, ul)').style.textDecoration = 'underline';
+				} catch (e) {}
+				try {
+					document.querySelector('.matches :matches(ol, ul)').style.textDecoration = 'underline';
+				} catch (e) {}
+				try {
+					document.querySelector('.webkit-any :-webkit-any(ol, ul)').style.textDecoration = 'underline';
+				} catch (e) {}
+				try {
+					document.querySelector('.moz-any :-moz-any(ol, ul)').style.textDecoration = 'underline';
+				} catch (e) {}
+			});
+		</script>
+	</head>
+	<body>
+		<h1>:is() Pseudo-classes</h1>
+
+		<p>In browsers that support each syntax, the text color is red and the list marker is a square.</p>
+		<p>Similarly, if it corresponds to the specification by <code>querySelector()</code> in JavaScript, the character will be underlined.</p>
+
+		<section class="is">
+			<h2>:is()</h2>
+
+			<ul>
+				<li>List 1</li>
+				<li>List 2</li>
+			</ul>
+		</section>
+
+		<section class="matches">
+			<h2>:matches()</h2>
+
+			<ul>
+				<li>List 1</li>
+				<li>List 2</li>
+			</ul>
+		</section>
+
+		<section class="webkit-any">
+			<h2>:-webkit-any()</h2>
+
+			<ul>
+				<li>List 1</li>
+				<li>List 2</li>
+			</ul>
+		</section>
+
+		<section class="moz-any">
+			<h2>:-moz-any()</h2>
+
+			<ul>
+				<li>List 1</li>
+				<li>List 2</li>
+			</ul>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Referrer Policy Demo (strict-origin)</title>
+		<link rel="stylesheet" href="/labs.css" />
+	</head>
+	<body>
+		<h1>Referrer Policy Demo (strict-origin)</h1>
+
+		<table>
+			<caption>
+				https://labs.w0s.jp/http/referrer-policy/strict-origin/ → https://www.whatismyreferer.com/
+			</caption>
+			<thead>
+				<tr>
+					<th>referrerpolicy attribute</th>
+					<th>Referer Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/">(none)</a></td>
+					<td>https://labs.w0s.jp/</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/" referrerpolicy="">referrerpolicy=""</a></td>
+					<td>https://labs.w0s.jp/</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/" referrerpolicy="no-referrer">referrerpolicy="no-referrer"</a></td>
+					<td>(not be sent)</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="https://www.whatismyreferer.com/" referrerpolicy="no-referrer-when-downgrade">referrerpolicy="no-referrer-when-downgrade"</a> (default)
+					</td>
+					<td>https://labs.w0s.jp/http/referrer-policy/strict-origin/</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/" referrerpolicy="same-origin">referrerpolicy="same-origin"</a></td>
+					<td>(not be sent)</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/" referrerpolicy="origin">referrerpolicy="origin"</a></td>
+					<td>https://labs.w0s.jp/</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/" referrerpolicy="strict-origin">referrerpolicy="strict-origin"</a></td>
+					<td>https://labs.w0s.jp/</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/" referrerpolicy="origin-when-cross-origin">referrerpolicy="origin-when-cross-origin"</a></td>
+					<td>https://labs.w0s.jp/</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="https://www.whatismyreferer.com/" referrerpolicy="strict-origin-when-cross-origin">referrerpolicy="strict-origin-when-cross-origin"</a>
+						(Chrome 85+ default)
+					</td>
+					<td>https://labs.w0s.jp/</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.whatismyreferer.com/" referrerpolicy="unsafe-url">referrerpolicy="unsafe-url"</a></td>
+					<td>https://labs.w0s.jp/http/referrer-policy/strict-origin/</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<footer>
+			<p>👈 <a href="../">Back</a></p>
+		</footer>
+	</body>
+</html>

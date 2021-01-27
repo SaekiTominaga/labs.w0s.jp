@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>&lt;datalist&gt;</title>
+		<link rel="stylesheet" href="/labs.css" />
+	</head>
+	<body>
+		<h1>&lt;datalist&gt;</h1>
+
+		<section>
+			<h2>&lt;input type="text"&gt;</h2>
+
+			<form>
+				<p>
+					<label>Animal <input name="animal" list="datalist-animal" /></label>
+				</p>
+				<p><button>Send</button></p>
+			</form>
+
+			<p>
+				<datalist id="datalist-animal">
+					<option value="cat">🐱</option>
+					<option value="dog">🐶</option>
+				</datalist>
+			</p>
+		</section>
+
+		<section>
+			<h2>&lt;input type="number"&gt;</h2>
+
+			<form>
+				<p>
+					<label>Age <input type="number" name="age" list="datalist-age" /></label>
+				</p>
+				<p><button>Send</button></p>
+			</form>
+
+			<p>
+				<datalist id="datalist-age">
+					<option value="10">10</option>
+					<option value="20">20</option>
+				</datalist>
+			</p>
+		</section>
+
+		<section>
+			<h2>&lt;input type="date"&gt;</h2>
+
+			<form>
+				<p>
+					<label>Date <input type="date" name="date" list="datalist-date" /></label>
+				</p>
+				<p><button>Send</button></p>
+			</form>
+
+			<p>
+				<datalist id="datalist-date">
+					<option value="2020-01-01">January 1, 2020</option>
+					<option value="2020-02-01">February 1, 2020</option>
+				</datalist>
+			</p>
+		</section>
+
+		<section>
+			<h2>&lt;input type="color"&gt;</h2>
+
+			<form>
+				<p>
+					<label>Color <input type="color" name="color" list="datalist-color" /></label>
+				</p>
+				<p><button>Send</button></p>
+			</form>
+
+			<p>
+				<datalist id="datalist-color">
+					<option value="#ff0000">Red</option>
+					<option value="#0000ff">Blue</option>
+				</datalist>
+			</p>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

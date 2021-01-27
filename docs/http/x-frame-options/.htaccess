@@ -1,0 +1,19 @@
+<Files "sameorigin.html">
+Header always unset Content-Security-Policy
+Header always set X-Frame-Options SAMEORIGIN
+Header always set X-Robots-Tag noindex
+</Files>
+<Files "deny.html">
+Header always unset Content-Security-Policy
+Header always set X-Frame-Options DENY
+Header always set X-Robots-Tag noindex
+</Files>
+
+<Files "sameorigin.png">
+Header always unset Content-Security-Policy
+Header always set X-Frame-Options SAMEORIGIN
+</Files>
+<Files "deny.png">
+Header always unset Content-Security-Policy
+Header always set X-Frame-Options DENY
+</Files>

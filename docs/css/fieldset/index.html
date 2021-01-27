@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>&lt;Fieldset&gt; Layout</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			/* Reset style */
+			fieldset {
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+
+			legend {
+				padding: 0;
+			}
+
+			/* Grid */
+			.form-grid {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0 1em;
+			}
+
+			.form-grid fieldset,
+			.form-grid .fieldset {
+				display: grid;
+				grid-column: 1/3;
+				grid-template-columns: subgrid;
+			}
+
+			.form-grid legend {
+				display: contents;
+			}
+
+			/* Flexbox */
+			.form-flexbox fieldset,
+			.form-flexbox .fieldset {
+				display: flex;
+				gap: 0 1em;
+			}
+
+			.form-flexbox legend,
+			.form-flexbox .legend {
+				display: contents;
+			}
+
+			/* Table */
+			.form-table {
+				display: table;
+			}
+
+			.form-table fieldset,
+			.form-table .fieldset {
+				display: table-row;
+			}
+
+			.form-table legend,
+			.form-table .legend {
+				padding-right: 1em;
+				display: table-cell;
+			}
+
+			.form-table .contents {
+				display: table-cell;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>&lt;Fieldset&gt; Layout</h1>
+
+		<section>
+			<h2>Grid &amp; Subgrid</h2>
+
+			<section>
+				<h3>&lt;fieldset&gt;, &lt;legend&gt;</h3>
+
+				<form class="form-grid">
+					<fieldset>
+						<legend>
+							<span class="legend"><label for="grid1-name">Name</label></span>
+						</legend>
+						<div class="contents">
+							<input id="grid1-name" />
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>
+							<span class="legend"><label for="grid1-email">E-mail Address</label></span>
+						</legend>
+						<div class="contents">
+							<input type="email" id="grid1-email" />
+						</div>
+					</fieldset>
+				</form>
+			</section>
+
+			<section>
+				<h3>&lt;div class="fieldset"&gt;, &lt;span class="legend"&gt;</h3>
+
+				<form class="form-grid">
+					<div class="fieldset">
+						<span class="legend"><label for="grid2-name">Name</label></span>
+						<div class="contents">
+							<input id="grid2-name" />
+						</div>
+					</div>
+					<div class="fieldset">
+						<span class="legend"><label for="grid2-email">E-mail Address</label></span>
+						<div class="contents">
+							<input type="email" id="grid2-email" />
+						</div>
+					</div>
+				</form>
+			</section>
+		</section>
+
+		<section>
+			<h2>Flexbox</h2>
+
+			<section>
+				<h3>&lt;fieldset&gt;, &lt;legend&gt;</h3>
+
+				<form class="form-flexbox">
+					<fieldset>
+						<legend><label for="flex1-name">Name</label></legend>
+						<div class="contents">
+							<input id="flex1-name" />
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend><label for="flex1-email">E-mail Address</label></legend>
+						<div class="contents">
+							<input type="email" id="flex1-email" />
+						</div>
+					</fieldset>
+				</form>
+			</section>
+
+			<section>
+				<h3>&lt;div class="fieldset"&gt;, &lt;span class="legend"&gt;</h3>
+
+				<form class="form-flexbox">
+					<div class="fieldset">
+						<span class="legend"><label for="flex2-name">Name</label></span>
+						<div class="contents">
+							<input id="flex2-name" />
+						</div>
+					</div>
+					<div class="fieldset">
+						<span class="legend"><label for="flex2-email">E-mail Address</label></span>
+						<div class="contents">
+							<input type="email" id="flex2-email" />
+						</div>
+					</div>
+				</form>
+			</section>
+		</section>
+
+		<section>
+			<h2>Table</h2>
+
+			<section>
+				<h3>&lt;fieldset&gt;, &lt;legend&gt;</h3>
+
+				<form class="form-table">
+					<fieldset>
+						<legend><label for="table1-name">Name</label></legend>
+						<div class="contents">
+							<input id="table1-name" />
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend><label for="table1-email">E-mail Address</label></legend>
+						<div class="contents">
+							<input type="email" id="table1-email" />
+						</div>
+					</fieldset>
+				</form>
+			</section>
+
+			<section>
+				<h3>&lt;div class="fieldset"&gt;, &lt;span class="legend"&gt;</h3>
+
+				<form class="form-table">
+					<div class="fieldset">
+						<span class="legend"><label for="table2-name">Name</label></span>
+						<div class="contents">
+							<input id="table2-name" />
+						</div>
+					</div>
+					<div class="fieldset">
+						<span class="legend"><label for="table2-email">E-mail Address</label></span>
+						<div class="contents">
+							<input type="email" id="table2-email" />
+						</div>
+					</div>
+				</form>
+			</section>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

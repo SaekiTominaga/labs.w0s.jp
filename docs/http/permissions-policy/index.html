@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Permissions Policy Demo</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			.framebox {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 15px;
+			}
+
+			.framebox iframe {
+				border: none;
+				box-sizing: border-box;
+				width: 100%;
+				min-height: 30em;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Permissions Policy Demo</h1>
+
+		<p><a href="https://w3c.github.io/webappsec-permissions-policy/">Specification</a></p>
+
+		<div class="framebox">
+			<p><iframe src="allowfullscreen.html" title="allowfullscreen Attribute"></iframe></p>
+			<p><iframe src="allow.html" title='allow="fullscreen" Attribute'></iframe></p>
+			<p><iframe src="feature-policy.html" title="Feature-Policy: fullscreen"></iframe></p>
+			<p><iframe src="permissions-policy.html" title="Permissions-Policy: fullscreen=()"></iframe></p>
+		</div>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

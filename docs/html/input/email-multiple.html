@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>&lt;input type="email" multiple&gt;</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			input[type='email' i] {
+				padding: 1em 0.5em;
+				border: 1px solid #ccc;
+				box-sizing: border-box;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>&lt;input type="email" multiple&gt;</h1>
+
+		<form>
+			<p>
+				<label>E-mail <input type="email" name="email" multiple="" list="maillist" /></label>
+			</p>
+			<p><button>Send</button></p>
+		</form>
+
+		<form>
+			<p>
+				<label>E-mail (required) <input type="email" name="email" multiple="" list="maillist" required="" /></label>
+			</p>
+			<p><button>Send</button></p>
+		</form>
+
+		<p>
+			<datalist id="maillist">
+				<option value="foo@example.com"></option>
+				<option value="bar@example.com"></option>
+				<option value="baz@example.com"></option>
+			</datalist>
+		</p>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

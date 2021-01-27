@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="initial-scale=1,width=device-width" />
+		<title>&lt;meta&gt; Viewport Demo</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			.form {
+				margin-top: 3em;
+			}
+
+			.form input {
+				padding: 1em;
+			}
+
+			.form > p:not([class]) {
+				margin: 0;
+			}
+
+			.form__output {
+				margin: 1em 0 0;
+				padding: 1em;
+				color: #000;
+				background: #eee;
+			}
+
+			.form__output output {
+				font-weight: bold;
+			}
+
+			.form__label {
+				margin-top: 0.75em;
+			}
+
+			@supports (grid-template-columns: subgrid) {
+				.form {
+					display: grid;
+					grid-template-areas: 'label ctrl';
+					grid-template-columns: auto 1fr;
+					gap: 0.5em 1em;
+				}
+
+				.form > p:not([class]) {
+					display: grid;
+					grid-column: label/ctrl;
+					grid-template-columns: subgrid;
+				}
+
+				.form__output {
+					grid-column: label/ctrl;
+				}
+
+				.form__label {
+					grid-column: label;
+				}
+
+				.form__ctrl {
+					grid-column: ctrl;
+				}
+			}
+
+			@supports not (grid-template-columns: subgrid) {
+				.form > p:not([class]):not(:first-child) {
+					margin-top: 0.5em;
+				}
+
+				.form__output {
+					margin-top: 1.5em;
+				}
+
+				.form__label {
+					margin-right: 1em;
+				}
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const viewportElement = document.querySelector('meta[name="viewport"]');
+				const viewportOutputElement = document.getElementById('output-viewport-value');
+				viewportOutputElement.value = viewportElement.content;
+
+				const viewportContentMap = new Map();
+				for (const property of viewportElement.content.split(',')) {
+					const [key, value] = property.split('=');
+					viewportContentMap.set(key, value);
+				}
+
+				const update = (viewportContentMap, updateKey, updateValue) => {
+					if (updateValue === '') {
+						viewportContentMap.delete(updateKey);
+					} else {
+						viewportContentMap.set(updateKey, updateValue);
+					}
+
+					const properties = [];
+					for (const [key, value] of viewportContentMap) {
+						properties.push(`${key}=${value}`);
+					}
+					properties.sort();
+					const viewportNewContent = properties.join(',');
+					viewportElement.content = viewportNewContent;
+					viewportOutputElement.value = viewportNewContent;
+				};
+
+				for (const inputElement of document.querySelectorAll('.form input:not([type="hidden"])')) {
+					inputElement.addEventListener('change', (ev) => {
+						const targetElement = ev.target;
+						const updateKey = targetElement.name;
+						const updateValue = targetElement.value;
+
+						if (updateValue === '') {
+							viewportContentMap.delete(updateKey);
+						} else {
+							viewportContentMap.set(updateKey, updateValue);
+						}
+
+						const properties = [];
+						for (const [key, value] of viewportContentMap) {
+							properties.push(`${key}=${value}`);
+						}
+						properties.sort();
+						const viewportNewContent = properties.join(',');
+						viewportElement.content = viewportNewContent;
+						viewportOutputElement.value = viewportNewContent;
+					});
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<h1>&lt;meta&gt; Viewport Demo</h1>
+
+		<p lang="ja">
+			寿限無、寿限無、五劫の擦り切れ、海砂利水魚の、水行末・雲来末・風来末、喰う寝る処に住む処、藪ら柑子の藪柑子、パイポ・パイポ・パイポのシューリンガン、シューリンガンのグーリンダイ、グーリンダイのポンポコピーのポンポコナの、長久命の長助
+		</p>
+
+		<div class="form">
+			<p>
+				<label class="form__label" for="input-width">width</label>
+				<span class="form__ctrl">
+					<input name="width" value="device-width" list="input-width-list" id="input-width" />
+					<datalist id="input-width-list">
+						<option>device-width</option>
+					</datalist>
+				</span>
+			</p>
+			<p>
+				<label class="form__label" for="input-height">height</label>
+				<span class="form__ctrl">
+					<input name="height" list="input-height-list" id="input-height" />
+					<datalist id="input-height-list">
+						<option>device-height</option>
+					</datalist>
+				</span>
+			</p>
+			<p>
+				<label class="form__label" for="input-initial-scale">initial-scale</label>
+				<span class="form__ctrl"><input type="number" min="0" max="10" step="0.01" name="initial-scale" value="1" id="input-initial-scale" /></span>
+			</p>
+			<p>
+				<label class="form__label" for="input-minimum-scale">minimum-scale</label>
+				<span class="form__ctrl"><input type="number" min="0" max="10" step="0.01" name="minimum-scale" id="input-minimum-scale" /></span>
+			</p>
+			<p>
+				<label class="form__label" for="input-maximum-scale">maximum-scale</label>
+				<span class="form__ctrl"><input type="number" min="0" max="10" step="0.01" name="maximum-scale" id="input-maximum-scale" /></span>
+			</p>
+			<p>
+				<label class="form__label" for="input-user-scalable">user-scalable</label>
+				<span class="form__ctrl">
+					<input name="user-scalable" list="input-user-scalable-list" id="input-user-scalable" />
+					<datalist id="input-user-scalable-list">
+						<option>yes</option>
+						<option>no</option>
+					</datalist>
+				</span>
+			</p>
+			<p>
+				<label class="form__label" for="input-viewport-fit">viewport-fit</label>
+				<span class="form__ctrl">
+					<input name="viewport-fit" list="input-viewport-fit-list" id="input-viewport-fit" />
+					<datalist id="input-viewport-fit-list">
+						<option>auto</option>
+						<option>contain</option>
+						<option>cover</option>
+					</datalist>
+				</span>
+			</p>
+			<p class="form__output">
+				&lt;meta name=&quot;viewport&quot; content=&quot;<output
+					for="input-width input-height input-initial-scale input-minimum-scale input-maximum-scale input-user-scalable input-viewport-fit"
+					id="output-viewport-value"
+				>
+				</output
+				>&quot;/&gt;
+			</p>
+		</div>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

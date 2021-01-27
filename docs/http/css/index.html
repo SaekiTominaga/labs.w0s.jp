@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>CSS with HTTP header Demo</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			.sample {
+				margin: 2em 1em 0;
+				padding: 0.5em 1em;
+				border: 3px solid;
+			}
+
+			.sample > p {
+				margin: 0.5em;
+			}
+
+			.sample em {
+				font-weight: bold;
+			}
+
+			.sample.-support {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS with HTTP header Demo</h1>
+
+		<p>The following response headers are set on this page.</p>
+		<ul>
+			<li>
+				<code>Link: &lt;<a href="common.css">common.css</a>&gt;;rel=stylesheet</code>
+			</li>
+			<li>
+				<code>Link: &lt;<a href="print.css">print.css</a>&gt;;rel=stylesheet;media=print</code>
+			</li>
+			<li>
+				<code>Link: &lt;<a href="light.css">light.css</a>&gt;;rel=stylesheet;title=Light mode</code>
+			</li>
+			<li>
+				<code>Link: &lt;<a href="dark.css">dark.css</a>&gt;;rel=alternate stylesheet;title=Dark mode</code>
+			</li>
+		</ul>
+
+		<div class="sample -support">
+			<p>This browser supports loading CSS with HTTP headers.</p>
+			<p>When printing, the border becomes a double line. (<code>border-style: double</code>)</p>
+		</div>
+
+		<div class="sample -nosupport">
+			<p>This browser <em>does not</em> support loading CSS with HTTP headers.</p>
+		</div>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

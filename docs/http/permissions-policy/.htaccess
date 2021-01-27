@@ -1,0 +1,7 @@
+# mod_headers
+<Files "feature-policy.html">
+Header always set Feature-Policy "fullscreen 'self' https://www.youtube-nocookie.com;"
+</Files>
+<Files "permissions-policy.html">
+Header always set Permissions-Policy "fullscreen=(self 'https://www.youtube-nocookie.com')"
+</Files>

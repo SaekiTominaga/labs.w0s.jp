@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML vs XML MIME type</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			.framebox {
+				display: grid;
+				grid-template-areas: "html xhtml";
+				grid-template-columns: 1fr 1fr;
+				gap: 15px;
+			}
+
+			.framebox iframe {
+				border: none;
+				box-sizing: border-box;
+				width: 100%;
+				min-height: 36em;
+			}
+
+			.framebox iframe:nth-child(1) {
+				grid-column: html;
+			}
+
+			.framebox iframe:nth-child(2) {
+				grid-column: xhtml;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>HTML vs XML MIME type</h1>
+
+		<div class="framebox">
+			<p><iframe src="sample.html" title="HTML MIME type (text/html)"></iframe></p>
+			<p><iframe src="sample.xhtml" title="XML MIME type (application/xhtml+xml)"></iframe></p>
+		</div>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

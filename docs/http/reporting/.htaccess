@@ -1,0 +1,13 @@
+## CSP
+Header set Report-To '{"group": "csp-report-to", "max_age": 10886400, "endpoints": [{"url": "https://example.com/report-to-report-to"}]}'
+Header set Reporting-Endpoints 'csp-reporting-endpoints="https://example.com/report-to-reporting-endpoints"'
+
+<Files "report-uri.html">
+Header set Content-Security-Policy: "default-src 'self'; report-uri https://example.com/report-uri"
+</Files>
+<Files "report-to-report-to.html">
+Header set Content-Security-Policy: "default-src 'self'; report-to csp-report-to"
+</Files>
+<Files "report-to-reporting-endpoints.html">
+Header set Content-Security-Policy: "default-src 'self'; report-to csp-reporting-endpoints"
+</Files>

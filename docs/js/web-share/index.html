@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Web Share API Demo</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			.share_button:disabled {
+				/* display: none; */ /* 未対応ブラウザではボタンを非表示にするなどの対応をしてもいいかもしれません */
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				document.getElementById('support-share').textContent = navigator.share !== undefined ? '✔ Support' : '✘ No Support';
+				document.getElementById('support-canshare').textContent = navigator.share !== undefined ? '✔ Support' : '✘ No Support';
+			});
+
+			if (navigator.share !== undefined) {
+				/* 未対応ブラウザも多いので判定処理 */
+				document.addEventListener('DOMContentLoaded', () => {
+					const shareErrorMessageElement = document.getElementById('share-error');
+					for (const shareButtonElement of document.querySelectorAll('.share-button')) {
+						shareButtonElement.disabled = false; // ボタンを活性化
+						shareButtonElement.addEventListener('click', () => {
+							const shareTitle = shareButtonElement.dataset.shareTitle;
+							const shareText = shareButtonElement.dataset.shareText;
+							const shareUrl = shareButtonElement.dataset.shareUrl;
+
+							try {
+								navigator.share({
+									title: shareTitle !== undefined ? shareTitle : document.title, // 属性が指定されていないときはページタイトル
+									text: shareText,
+									url: shareUrl !== undefined ? shareUrl : document.URL, // 属性が指定されていないときはページURL
+								});
+
+								shareErrorMessageElement.textContent = '';
+							} catch (e) {
+								console.error('Share failed', e);
+								shareErrorMessageElement.textContent = e.message;
+							}
+						});
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Web Share API Demo</h1>
+
+		<p><a href="https://w3c.github.io/web-share/">Specification</a>,</p>
+
+		<dl>
+			<dt>Supported browsers</dt>
+			<dd><a href="https://caniuse.com/web-share">Can I use...</a></dd>
+			<dt>Commentary article</dt>
+			<dd><a href="https://w0s.jp/diary/532" hreflang="ja">Web Share API によるシェアボタン</a></dd>
+		</dl>
+
+		<section>
+			<h2>Your Browser Suport</h2>
+
+			<dl>
+				<dt>navigator.share()</dt>
+				<dd><span class="support" id="support-share"></span></dd>
+				<dt>navigator.canShare()</dt>
+				<dd><span class="support" id="support-canshare"></span></dd>
+			</dl>
+		</section>
+
+		<section>
+			<h2>Demo</h2>
+
+			<section>
+				<h3>Example of automatically acquiring shared content</h3>
+
+				<p><button type="button" disabled="" class="share-button">Share</button></p>
+			</section>
+
+			<section>
+				<h3>Example of manually setting the share contents with the data-* attribute</h3>
+
+				<p>
+					<button
+						type="button"
+						disabled=""
+						class="share-button"
+						data-share-title="Web Share API Demo"
+						data-share-text="This page demonstrates the Web Share API."
+						data-share-url="http://labs.w0s.jp/js/web-share/"
+					>
+						Share
+					</button>
+				</p>
+			</section>
+
+			<div id="share-error"></div>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>
