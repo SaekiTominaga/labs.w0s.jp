@@ -5,3 +5,7 @@ AddType "text/html; charset=Shift_JIS" .html
 <FilesMatch "meta-([a-z0-9\-]+)\.html$">
 AddType "text/html; charset=" .html
 </FilesMatch>
+
+<FilesMatch "nocharset-([a-z0-9\-]+)\.html$">
+AddType "text/html; charset=" .html
+</FilesMatch>
