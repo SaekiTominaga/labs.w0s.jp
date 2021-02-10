@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>OGP - charset</title>
+		<link rel="stylesheet" href="/labs.css" />
+	</head>
+	<body>
+		<h1>OGP - charset</h1>
+
+		<nav>
+			<section>
+				<h2>Content-Type: text/html; charset=XXX</h2>
+
+				<ul>
+					<li><a href="http-utf8.html">UTF-8</a></li>
+					<li><a href="http-shiftjis.html">Shift_JIS</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>&lt;meta http-equiv="Content-Type" content="text/html; charset=XXX"&gt;</h2>
+
+				<p>* No charset parameter in Content-Type header</p>
+
+				<ul>
+					<li><a href="meta-httpequiv-utf8-within1024.html">UTF-8 (within the first 1024 bytes)</a></li>
+					<li><a href="meta-httpequiv-utf8-without1024.html">UTF-8 (without the first 1024 bytes)</a></li>
+					<li><a href="meta-httpequiv-shiftjis-within1024.html">Shift_JIS (within the first 1024 bytes)</a></li>
+					<li><a href="meta-httpequiv-shiftjis-without1024.html">Shift_JIS (without the first 1024 bytes)</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>&lt;meta charset="XXX"&gt;</h2>
+
+				<p>* No charset parameter in Content-Type header</p>
+
+				<ul>
+					<li><a href="meta-charset-utf8-within1024.html">UTF-8 (within the first 1024 bytes)</a></li>
+					<li><a href="meta-charset-utf8-without1024.html">UTF-8 (without the first 1024 bytes)</a></li>
+					<li><a href="meta-charset-shiftjis-within1024.html">Shift_JIS (within the first 1024 bytes)</a></li>
+					<li><a href="meta-charset-shiftjis-without1024.html">Shift_JIS (without the first 1024 bytes)</a></li>
+				</ul>
+			</section>
+		</nav>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>

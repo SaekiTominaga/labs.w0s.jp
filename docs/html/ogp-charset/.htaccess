@@ -1,0 +1,7 @@
+<Files "http-shiftjis.html">
+AddType "text/html; charset=Shift_JIS" .html
+</Files>
+
+<FilesMatch "meta-([a-z0-9\-]+)\.html$">
+AddType "text/html; charset=" .html
+</FilesMatch>
