@@ -3,7 +3,7 @@
 	"ignoreFiles": ["**/*.html"],
 	"rules": {
 		"at-rule-empty-line-before": ["always", { "except": ["first-nested"], "ignore": ["after-comment"], "ignoreAtRules": ["import", "custom-media"] }],
-		"block-no-empty": null,
+		"block-no-empty": true,
 		"custom-property-empty-line-before": ["always", { "except": ["after-comment", "after-custom-property", "first-nested"] }],
 		"declaration-block-no-duplicate-properties": [true, { "ignore": ["consecutive-duplicates-with-different-values"] }],
 		"declaration-colon-newline-after": "always-multi-line",
@@ -11,7 +11,6 @@
 		"indentation": "tab",
 		"length-zero-no-unit": null,
 		"linebreaks": "unix",
-		"max-nesting-depth": 5,
 		"no-descending-specificity": null,
 		"no-duplicate-selectors": true,
 		"selector-max-id": 0,
