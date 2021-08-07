@@ -25,6 +25,11 @@
 				flex: 0 min(20em, 100%);
 			}
 		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				document.getElementById(location.protocol === 'http:' ? 'nav-http' : 'nav-https').removeAttribute('href');
+			});
+		</script>
 	</head>
 	<body itemscope="" itemtype="http://schema.org/WebPage">
 		<h1 itemprop="name">labs.w0s.jp</h1>
@@ -32,6 +37,8 @@
 		<p itemprop="description">
 			This site is a verification site for various web technologies. The owner's personal website is <a href="https://w0s.jp/">w0s.jp</a>.
 		</p>
+
+		<p><a href="http://labs.w0s.jp/" id="nav-http">HTTP</a> <a href="https://labs.w0s.jp/" id="nav-https">HTTPS</a></p>
 
 		<nav>
 			<h2>Contents</h2>
@@ -71,7 +78,9 @@
 					<li><a href="html/datalist/">&lt;datalist&gt;</a></li>
 					<li><a href="html/details/">&lt;details&gt;</a></li>
 					<li><a href="html/iframe/">&lt;iframe&gt;</a></li>
-					<li><a href="html/enterkeyhint/"><code>enterkeyhint</code> attribute</a></li>
+					<li>
+						<a href="html/enterkeyhint/"><code>enterkeyhint</code> attribute</a>
+					</li>
 					<li><a href="html/xhtml/">HTML vs XML MIME type</a></li>
 				</ul>
 			</section>
