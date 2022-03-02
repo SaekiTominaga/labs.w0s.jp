@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>&lt;dialog&gt;</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				for (const showButtonElement of document.querySelectorAll('.show')) {
+					showButtonElement.addEventListener('click', () => {
+						const dialogElement = showButtonElement.closest('section').querySelector('dialog');
+						dialogElement.show();
+					});
+				}
+
+				for (const showModalButtonElement of document.querySelectorAll('.show-modal')) {
+					showModalButtonElement.addEventListener('click', () => {
+						const dialogElement = showModalButtonElement.closest('section').querySelector('dialog');
+						dialogElement.showModal();
+					});
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<h1>&lt;dialog&gt;</h1>
+
+		<section>
+			<h2>dialog1</h2>
+
+			<p><button class="show">show()</button></p>
+			<p><button class="show-modal">showModal()</button></p>
+
+			<dialog>
+				<h3>dialog1</h3>
+
+				<form method="dialog">
+					<button>Close</button>
+				</form>
+			</dialog>
+		</section>
+
+		<section>
+			<h2>dialog2</h2>
+
+			<p><button class="show">show()</button></p>
+			<p><button class="show-modal">showModal()</button></p>
+
+			<dialog open="">
+				<h3>dialog2</h3>
+
+				<form method="dialog">
+					<button>Close</button>
+				</form>
+			</dialog>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>
