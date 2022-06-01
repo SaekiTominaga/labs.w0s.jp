@@ -13,10 +13,10 @@
 		"url": "git+https://github.com/SaekiTominaga/labs.w0s.jp.git"
 	},
 	"devDependencies": {
-		"prettier": "^2.3.2",
-		"stylelint": "^13.13.1",
-		"stylelint-config-prettier": "^8.0.2",
-		"stylelint-config-standard": "^22.0.0",
-		"stylelint-prettier": "^1.2.0"
+		"prettier": "^2.6.2",
+		"stylelint": "^14.8.5",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-standard": "^25.0.0",
+		"stylelint-prettier": "^2.0.0"
 	}
 }
