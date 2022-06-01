@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>&lt;object&gt; alternative text Demo</title>
+		<link rel="stylesheet" href="/labs.css" />
+	</head>
+	<body>
+		<h1>&lt;object&gt; alternative text Demo</h1>
+
+		<section>
+			<h2><code>type</code></h2>
+
+			<object data="sample.jpg" type="image/jpeg">
+				<div id="object1">
+					<h3>object alt heading</h3>
+					<p>object alt text</p>
+				</div>
+			</object>
+		</section>
+
+		<section>
+			<h2><code>type</code>, <code>role=img</code></h2>
+
+			<object data="sample.jpg" type="image/jpeg" role="img">
+				<div id="object2">
+					<h3>object alt heading</h3>
+					<p>object alt text</p>
+				</div>
+			</object>
+		</section>
+
+		<section>
+			<h2><code>type</code>, <code>aria-labelledby</code></h2>
+
+			<object data="sample.jpg" type="image/jpeg" aria-labelledby="object3">
+				<div id="object3">
+					<h3>object alt heading</h3>
+					<p>object alt text</p>
+				</div>
+			</object>
+		</section>
+
+		<section>
+			<h2><code>type</code>, <code>role=img</code>, <code>aria-labelledby</code></h2>
+
+			<object data="sample.jpg" type="image/jpeg" role="img" aria-labelledby="object4">
+				<div id="object4">
+					<h3>object alt heading</h3>
+					<p>object alt text</p>
+				</div>
+			</object>
+		</section>
+
+		<footer>
+			<p>👈 <a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>
