@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="/labs.css" />
 		<style>
 			.form {
-				margin-top: 3em;
+				margin-block-start: 3em;
 			}
 
 			.form input {
@@ -29,7 +29,7 @@
 			}
 
 			.form__label {
-				margin-top: 0.75em;
+				margin-block-start: 0.75em;
 			}
 
 			@supports (grid-template-columns: subgrid) {
@@ -61,15 +61,15 @@
 
 			@supports not (grid-template-columns: subgrid) {
 				.form > p:not([class]):not(:first-child) {
-					margin-top: 0.5em;
+					margin-block-start: 0.5em;
 				}
 
 				.form__output {
-					margin-top: 1.5em;
+					margin-block-start: 1.5em;
 				}
 
 				.form__label {
-					margin-right: 1em;
+					margin-inline-end: 1em;
 				}
 			}
 		</style>
