@@ -1,11 +1,11 @@
 nav > ul > li + li,
 nav > section > ul > li + li {
-	margin-top: 0.5em;
+	margin-block-start: 0.5em;
 }
 
 nav > ul ul,
 nav > section > ul ul {
-	padding-left: 1.5em;
+	padding-inline-start: 1.5em;
 }
 
 :is(h1, h2, h3, h4, h5, h6) code {
@@ -28,6 +28,6 @@ thead th {
 }
 
 body > footer {
-	margin-top: 3em;
-	border-top: 1px solid;
+	margin-block-start: 3em;
+	border-block-start: 1px solid;
 }
