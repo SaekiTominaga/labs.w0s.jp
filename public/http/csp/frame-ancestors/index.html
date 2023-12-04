@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>CSP: frame-ancestors Demo</title>
+		<title>CSP: `frame-ancestors` Demo</title>
 		<link rel="stylesheet" href="/labs.css" />
 		<style>
 			iframe,
@@ -21,82 +21,82 @@
 		</style>
 	</head>
 	<body>
-		<h1>CSP: frame-ancestors Demo</h1>
+		<h1>CSP: <code>frame-ancestors</code> Demo</h1>
 
 		<section>
-			<h2>&lt;iframe&gt;</h2>
+			<h2><code>&lt;iframe&gt;</code></h2>
 
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'self'</code></h3>
 				<p><iframe src="self.html?iframe"></iframe></p>
 			</section>
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'none'</code></h3>
 				<p><iframe src="none.html?iframe"></iframe></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;object type="text/html"&gt;</h2>
+			<h2><code>&lt;object type="text/html"&gt;</code></h2>
 
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'self'</code></h3>
 				<p><object data="self.html?object" type="text/html"></object></p>
 			</section>
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'none'</code></h3>
 				<p><object data="none.html?object" type="text/html"></object></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;object type="image/png"&gt;</h2>
+			<h2><code>&lt;object type="image/png"&gt;</code></h2>
 
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'self'</code></h3>
 				<p><object data="self.png?object" type="image/png"></object></p>
 			</section>
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'none'</code></h3>
 				<p><object data="none.png?object" type="image/png"></object></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;embed type="text/html"&gt;</h2>
+			<h2><code>&lt;embed type="text/html"&gt;</code></h2>
 
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'self'</code></h3>
 				<p><embed src="self.html?embed" type="text/html" /></p>
 			</section>
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'none'</code></h3>
 				<p><embed src="none.html?embed" type="text/html" /></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;embed type="image/png"&gt;</h2>
+			<h2><code>&lt;embed type="image/png"&gt;</code></h2>
 
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'self'</code></h3>
 				<p><embed src="self.png?embed" type="image/png" /></p>
 			</section>
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'none'</code></h3>
 				<p><embed src="none.png?embed" type="image/png" /></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;img&gt;</h2>
+			<h2><code>&lt;img&gt;</code></h2>
 
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'self'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'self'</code></h3>
 				<p><img src="self.png?img" alt="" /></p>
 			</section>
 			<section>
-				<h3>Content-Security-Policy: frame-ancestors 'none'</h3>
+				<h3><code>Content-Security-Policy: frame-ancestors 'none'</code></h3>
 				<p><img src="none.png?img" alt="" /></p>
 			</section>
 		</section>
