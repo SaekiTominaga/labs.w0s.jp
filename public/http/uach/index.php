@@ -86,7 +86,7 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 			<h2>JavaScript</h2>
 
 			<section>
-				<h3>navigator.userAgentData.brands</h3>
+				<h3><code>navigator.userAgentData.brands</code></h3>
 
 				<table>
 					<thead>
@@ -107,13 +107,13 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 			</section>
 
 			<section>
-				<h3>navigator.userAgentData.mobile</h3>
+				<h3><code>navigator.userAgentData.mobile</code></h3>
 
 				<p id="js-uach-mobile"></p>
 			</section>
 
 			<section>
-				<h3>navigator.userAgentData.getHighEntropyValues()</h3>
+				<h3><code>navigator.userAgentData.getHighEntropyValues()</code></h3>
 
 				<table>
 					<tbody>

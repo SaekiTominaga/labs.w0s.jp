@@ -31,3 +31,7 @@ body > footer {
 	margin-block-start: 3em;
 	border-block-start: 1px solid;
 }
+
+code {
+	color: red;
+}
