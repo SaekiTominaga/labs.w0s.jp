@@ -74,7 +74,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<section>
-			<h2>&lt;img&gt;</h2>
+			<h2><code>&lt;img&gt;</code></h2>
 
 			<table>
 				<tbody>
@@ -113,7 +113,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<section>
-			<h2>&lt;obeject type="image/png"&gt;</h2>
+			<h2><code>&lt;obeject type="image/png"&gt;</code></h2>
 
 			<p><object data="dummy-image.png?object" type="image/png"></object></p>
 
@@ -148,7 +148,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<section>
-			<h2>&lt;obeject type="image/svg+xml"&gt;</h2>
+			<h2><code>&lt;obeject type="image/svg+xml"&gt;</code></h2>
 
 			<table>
 				<tbody>
@@ -187,7 +187,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<section>
-			<h2>&lt;embed type="image/png"&gt;</h2>
+			<h2><code>&lt;embed type="image/png"&gt;</code></h2>
 
 			<p><embed src="dummy-image.png?embed" type="image/png"/></p>
 
@@ -222,7 +222,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<section>
-			<h2>&lt;embed type="image/svg+xml"&gt;</h2>
+			<h2><code>&lt;embed type="image/svg+xml"&gt;</code></h2>
 
 			<table>
 				<tbody>
@@ -261,7 +261,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<section>
-			<h2>&lt;link rel="stylesheet"&gt;</h2>
+			<h2><code>&lt;link rel="stylesheet"&gt;</code></h2>
 
 			<table>
 				<tbody>
@@ -300,7 +300,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<section>
-			<h2>&lt;script&gt;</h2>
+			<h2><code>&lt;script&gt;</code></h2>
 
 			<table>
 				<tbody>

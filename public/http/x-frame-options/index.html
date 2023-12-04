@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>X-Frame-Options Demo</title>
+		<title>`X-Frame-Options` Demo</title>
 		<link rel="stylesheet" href="/labs.css" />
 		<style>
 			iframe,
@@ -21,84 +21,84 @@
 		</style>
 	</head>
 	<body>
-		<h1>X-Frame-Options Demo</h1>
+		<h1><code>X-Frame-Options</code> Demo</h1>
 
 		<p><a href="https://tools.ietf.org/html/rfc7034">Specification</a></p>
 
 		<section>
-			<h2>&lt;iframe&gt;</h2>
+			<h2><code>&lt;iframe&gt;</code></h2>
 
 			<section>
-				<h3>X-Frame-Options: SAMEORIGIN</h3>
+				<h3><code>X-Frame-Options: SAMEORIGIN</code></h3>
 				<p><iframe src="sameorigin.html?iframe"></iframe></p>
 			</section>
 			<section>
-				<h3>X-Frame-Options: DENY</h3>
+				<h3><code>X-Frame-Options: DENY</code></h3>
 				<p><iframe src="deny.html?iframe"></iframe></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;object type="text/html"&gt;</h2>
+			<h2><code>&lt;object type="text/html"&gt;</code></h2>
 
 			<section>
-				<h3>X-Frame-Options: SAMEORIGIN</h3>
+				<h3><code>X-Frame-Options: SAMEORIGIN</code></h3>
 				<p><object data="sameorigin.html?object" type="text/html"></object></p>
 			</section>
 			<section>
-				<h3>X-Frame-Options: DENY</h3>
+				<h3><code>X-Frame-Options: DENY</code></h3>
 				<p><object data="deny.html?object" type="text/html"></object></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;object type="image/png"&gt;</h2>
+			<h2><code>&lt;object type="image/png"&gt;</code></h2>
 
 			<section>
-				<h3>X-Frame-Options: SAMEORIGIN</h3>
+				<h3><code>X-Frame-Options: SAMEORIGIN</code></h3>
 				<p><object data="sameorigin.png?object" type="image/png"></object></p>
 			</section>
 			<section>
-				<h3>X-Frame-Options: DENY</h3>
+				<h3><code>X-Frame-Options: DENY</code></h3>
 				<p><object data="deny.png?object" type="image/png"></object></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;embed type="text/html"&gt;</h2>
+			<h2><code>&lt;embed type="text/html"&gt;</code></h2>
 
 			<section>
-				<h3>X-Frame-Options: SAMEORIGIN</h3>
+				<h3><code>X-Frame-Options: SAMEORIGIN</code></h3>
 				<p><embed src="sameorigin.html?embed" type="text/html" /></p>
 			</section>
 			<section>
-				<h3>X-Frame-Options: DENY</h3>
+				<h3><code>X-Frame-Options: DENY</code></h3>
 				<p><embed src="deny.html?embed" type="text/html" /></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;embed type="image/png"&gt;</h2>
+			<h2><code>&lt;embed type="image/png"&gt;</code></h2>
 
 			<section>
-				<h3>X-Frame-Options: SAMEORIGIN</h3>
+				<h3><code>X-Frame-Options: SAMEORIGIN</code></h3>
 				<p><embed src="sameorigin.png?embed" type="image/png" /></p>
 			</section>
 			<section>
-				<h3>X-Frame-Options: DENY</h3>
+				<h3><code>X-Frame-Options: DENY</code></h3>
 				<p><embed src="deny.png?embed" type="image/png" /></p>
 			</section>
 		</section>
 
 		<section>
-			<h2>&lt;img&gt;</h2>
+			<h2><code>&lt;img&gt;</code></h2>
 
 			<section>
-				<h3>X-Frame-Options: SAMEORIGIN</h3>
+				<h3><code>X-Frame-Options: SAMEORIGIN</code></h3>
 				<p><img src="sameorigin.png?img" alt="" /></p>
 			</section>
 			<section>
-				<h3>X-Frame-Options: DENY</h3>
+				<h3><code>X-Frame-Options: DENY</code></h3>
 				<p><img src="deny.png?img" alt="" /></p>
 			</section>
 		</section>
