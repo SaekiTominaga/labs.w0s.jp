@@ -31,3 +31,9 @@ body > footer {
 	margin-block-start: 3em;
 	border-block-start: 1px solid;
 }
+
+body > footer :any-link::before {
+	margin-inline-end: 0.25em;
+	content: "👈";
+	display: inline-block;
+}

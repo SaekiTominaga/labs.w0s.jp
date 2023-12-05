@@ -378,7 +378,7 @@ header('Content-Type: text/html; charset=utf-8');
 		</section>
 
 		<footer>
-			<p>👈 <a href="../../">Back</a></p>
+			<p><a href="../../">Back</a></p>
 		</footer>
 	</body>
 </html>
