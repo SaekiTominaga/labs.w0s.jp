@@ -130,7 +130,7 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 		</section>
 
 		<footer>
-			<p>👈 <a href="../../">Back</a></p>
+			<p><a href="../../">Back</a></p>
 		</footer>
 	</body>
 </html>
