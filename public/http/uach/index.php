@@ -38,7 +38,7 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 			iframe {
 				border: none;
 				box-sizing: border-box;
-				width: 100%;
+				inline-size: 100%;
 			}
 		</style>
 		<script type="module">
