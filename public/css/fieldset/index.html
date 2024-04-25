@@ -8,8 +8,8 @@
 			/* Reset style */
 			fieldset {
 				margin: 0;
-				padding: 0;
 				border: none;
+				padding: 0;
 			}
 
 			legend {
@@ -18,16 +18,16 @@
 
 			/* Grid */
 			.form-grid {
-				display: grid;
+				display: block grid;
 				grid-template-columns: auto 1fr;
 				gap: 0 1em;
 			}
 
 			.form-grid fieldset,
 			.form-grid .fieldset {
-				display: grid;
-				grid-column: 1/3;
+				display: block grid;
 				grid-template-columns: subgrid;
+				grid-column: 1/3;
 			}
 
 			.form-grid legend {
@@ -37,7 +37,7 @@
 			/* Flexbox */
 			.form-flexbox fieldset,
 			.form-flexbox .fieldset {
-				display: flex;
+				display: block flex;
 				gap: 0 1em;
 			}
 
@@ -48,7 +48,7 @@
 
 			/* Table */
 			.form-table {
-				display: table;
+				display: block table;
 			}
 
 			.form-table fieldset,
@@ -58,8 +58,8 @@
 
 			.form-table legend,
 			.form-table .legend {
-				padding-inline-end: 1em;
 				display: table-cell;
+				padding-inline-end: 1em;
 			}
 
 			.form-table .contents {

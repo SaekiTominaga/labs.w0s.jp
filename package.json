@@ -2,13 +2,13 @@
 	"name": "labs.w0s.jp",
 	"private": true,
 	"scripts": {
-		"format": "prettier -w ."
+		"format": "prettier -w .",
+		"css-lint": "stylelint public/**/*.{css,html}"
 	},
 	"devDependencies": {
+		"@w0s/stylelint-config": "^4.3.0",
+		"postcss-html": "^1.6.0",
 		"prettier": "^2.6.2",
-		"stylelint": "^14.8.5",
-		"stylelint-config-prettier": "^9.0.3",
-		"stylelint-config-standard": "^25.0.0",
-		"stylelint-prettier": "^2.0.0"
+		"stylelint": "^16.4.0"
 	}
 }

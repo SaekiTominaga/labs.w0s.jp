@@ -18,13 +18,13 @@ table {
 
 th,
 td {
-	padding: 0.25em;
 	border: 1px solid #000;
+	padding: 0.25em;
 }
 
 thead th {
-	color: #000;
 	background-color: #eee;
+	color: #000;
 }
 
 body > footer {
@@ -33,7 +33,7 @@ body > footer {
 }
 
 body > footer :any-link::before {
+	display: inline flow-root;
 	margin-inline-end: 0.25em;
 	content: "👈";
-	display: inline-block;
 }
