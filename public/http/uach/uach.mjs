@@ -23,13 +23,7 @@ export default () => {
 			document.getElementById('js-uach-mobile').textContent = userAgentData.mobile;
 
 			/* getHighEntropyValues() */
-			const highEntropyValues = await userAgentData.getHighEntropyValues([
-				'platform',
-				'platformVersion',
-				'architecture',
-				'model',
-				'uaFullVersion',
-			]);
+			const highEntropyValues = await userAgentData.getHighEntropyValues(['platform', 'platformVersion', 'architecture', 'model', 'uaFullVersion']);
 
 			const highentropyvaluesTemplateElement = document.getElementById('js-uach-highentropyvalues');
 			const highentropyvaluesFragment = document.createDocumentFragment();
@@ -44,4 +38,4 @@ export default () => {
 			highentropyvaluesTemplateElement.parentNode?.appendChild(highentropyvaluesFragment);
 		});
 	}
-}
+};
