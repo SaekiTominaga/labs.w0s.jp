@@ -1,0 +1,30 @@
+name: css-lint
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.stylelintrc.json'
+      - 'package.json'
+      - 'public/**/*.css'
+      - 'public/**/*.html'
+  push:
+    branches:
+      - main
+    paths:
+      - '.stylelintrc.json'
+      - 'package.json'
+      - 'public/**/*.css'
+      - 'public/**/*.html'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - run: npm run css-lint

@@ -6,71 +6,43 @@
 		<link rel="stylesheet" href="/labs.css" />
 		<style>
 			.form {
+				display: block grid;
+				grid-template-areas: 'label ctrl';
+				grid-template-columns: auto 1fr;
+				gap: 0.5em 1em;
 				margin-block-start: 3em;
+			}
+
+			.form > p:not([class]) {
+				display: block grid;
+				grid-template-columns: subgrid;
+				grid-column: label/ctrl;
+				margin: 0;
+			}
+
+			.form-label {
+				grid-column: label;
+				margin-block-start: 0.75em;
+			}
+
+			.form-ctrl {
+				grid-column: ctrl;
 			}
 
 			.form input {
 				padding: 1em;
 			}
 
-			.form > p:not([class]) {
-				margin: 0;
-			}
-
-			.form__output {
+			.form-output {
+				grid-column: label/ctrl;
 				margin: 1em 0 0;
+				background: #eee;
 				padding: 1em;
 				color: #000;
-				background: #eee;
 			}
 
-			.form__output output {
+			.form-output output {
 				font-weight: bold;
-			}
-
-			.form__label {
-				margin-block-start: 0.75em;
-			}
-
-			@supports (grid-template-columns: subgrid) {
-				.form {
-					display: grid;
-					grid-template-areas: 'label ctrl';
-					grid-template-columns: auto 1fr;
-					gap: 0.5em 1em;
-				}
-
-				.form > p:not([class]) {
-					display: grid;
-					grid-column: label/ctrl;
-					grid-template-columns: subgrid;
-				}
-
-				.form__output {
-					grid-column: label/ctrl;
-				}
-
-				.form__label {
-					grid-column: label;
-				}
-
-				.form__ctrl {
-					grid-column: ctrl;
-				}
-			}
-
-			@supports not (grid-template-columns: subgrid) {
-				.form > p:not([class]):not(:first-child) {
-					margin-block-start: 0.5em;
-				}
-
-				.form__output {
-					margin-block-start: 1.5em;
-				}
-
-				.form__label {
-					margin-inline-end: 1em;
-				}
 			}
 		</style>
 		<script>
@@ -84,23 +56,6 @@
 					const [key, value] = property.split('=');
 					viewportContentMap.set(key, value);
 				}
-
-				const update = (viewportContentMap, updateKey, updateValue) => {
-					if (updateValue === '') {
-						viewportContentMap.delete(updateKey);
-					} else {
-						viewportContentMap.set(updateKey, updateValue);
-					}
-
-					const properties = [];
-					for (const [key, value] of viewportContentMap) {
-						properties.push(`${key}=${value}`);
-					}
-					properties.sort();
-					const viewportNewContent = properties.join(',');
-					viewportElement.content = viewportNewContent;
-					viewportOutputElement.value = viewportNewContent;
-				};
 
 				for (const inputElement of document.querySelectorAll('.form input:not([type="hidden"])')) {
 					inputElement.addEventListener('change', (ev) => {
@@ -136,8 +91,8 @@
 
 		<div class="form">
 			<p>
-				<label class="form__label" for="input-width">width</label>
-				<span class="form__ctrl">
+				<label class="form-label" for="input-width">width</label>
+				<span class="form-ctrl">
 					<input name="width" value="device-width" list="input-width-list" id="input-width" />
 					<datalist id="input-width-list">
 						<option>device-width</option>
@@ -145,8 +100,8 @@
 				</span>
 			</p>
 			<p>
-				<label class="form__label" for="input-height">height</label>
-				<span class="form__ctrl">
+				<label class="form-label" for="input-height">height</label>
+				<span class="form-ctrl">
 					<input name="height" list="input-height-list" id="input-height" />
 					<datalist id="input-height-list">
 						<option>device-height</option>
@@ -154,20 +109,20 @@
 				</span>
 			</p>
 			<p>
-				<label class="form__label" for="input-initial-scale">initial-scale</label>
-				<span class="form__ctrl"><input type="number" min="0" max="10" step="0.01" name="initial-scale" value="1" id="input-initial-scale" /></span>
+				<label class="form-label" for="input-initial-scale">initial-scale</label>
+				<span class="form-ctrl"><input type="number" min="0" max="10" step="0.01" name="initial-scale" value="1" id="input-initial-scale" /></span>
 			</p>
 			<p>
-				<label class="form__label" for="input-minimum-scale">minimum-scale</label>
-				<span class="form__ctrl"><input type="number" min="0" max="10" step="0.01" name="minimum-scale" id="input-minimum-scale" /></span>
+				<label class="form-label" for="input-minimum-scale">minimum-scale</label>
+				<span class="form-ctrl"><input type="number" min="0" max="10" step="0.01" name="minimum-scale" id="input-minimum-scale" /></span>
 			</p>
 			<p>
-				<label class="form__label" for="input-maximum-scale">maximum-scale</label>
-				<span class="form__ctrl"><input type="number" min="0" max="10" step="0.01" name="maximum-scale" id="input-maximum-scale" /></span>
+				<label class="form-label" for="input-maximum-scale">maximum-scale</label>
+				<span class="form-ctrl"><input type="number" min="0" max="10" step="0.01" name="maximum-scale" id="input-maximum-scale" /></span>
 			</p>
 			<p>
-				<label class="form__label" for="input-user-scalable">user-scalable</label>
-				<span class="form__ctrl">
+				<label class="form-label" for="input-user-scalable">user-scalable</label>
+				<span class="form-ctrl">
 					<input name="user-scalable" list="input-user-scalable-list" id="input-user-scalable" />
 					<datalist id="input-user-scalable-list">
 						<option>yes</option>
@@ -176,8 +131,8 @@
 				</span>
 			</p>
 			<p>
-				<label class="form__label" for="input-viewport-fit">viewport-fit</label>
-				<span class="form__ctrl">
+				<label class="form-label" for="input-viewport-fit">viewport-fit</label>
+				<span class="form-ctrl">
 					<input name="viewport-fit" list="input-viewport-fit-list" id="input-viewport-fit" />
 					<datalist id="input-viewport-fit-list">
 						<option>auto</option>
@@ -186,7 +141,7 @@
 					</datalist>
 				</span>
 			</p>
-			<p class="form__output">
+			<p class="form-output">
 				<code>
 					&lt;meta name=&quot;viewport&quot; content=&quot;<output
 						for="input-width input-height input-initial-scale input-minimum-scale input-maximum-scale input-user-scalable input-viewport-fit"

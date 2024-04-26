@@ -5,8 +5,8 @@
 		<title>Web Share API Demo</title>
 		<link rel="stylesheet" href="/labs.css" />
 		<style>
-			.share_button:disabled {
-				/* display: none; */ /* 未対応ブラウザではボタンを非表示にするなどの対応をしてもいいかもしれません */
+			.share-button:disabled {
+				/* 未対応ブラウザでは `display: none` するなどの対応をしてもいいかもしれません */
 			}
 		</style>
 		<script>
@@ -22,9 +22,7 @@
 					for (const shareButtonElement of document.querySelectorAll('.share-button')) {
 						shareButtonElement.disabled = false; // ボタンを活性化
 						shareButtonElement.addEventListener('click', () => {
-							const shareTitle = shareButtonElement.dataset.shareTitle;
-							const shareText = shareButtonElement.dataset.shareText;
-							const shareUrl = shareButtonElement.dataset.shareUrl;
+							const { shareTitle, shareText, shareUrl } = shareButtonElement.dataset;
 
 							try {
 								navigator.share({
