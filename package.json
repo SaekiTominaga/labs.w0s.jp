@@ -4,7 +4,8 @@
 	"scripts": {
 		"format": "prettier -w .",
 		"html-lint": "markuplint -c .markuplintrc public/**/*.{html,php}",
-		"css-lint": "stylelint public/**/*.{css,html}"
+		"css-lint": "stylelint public/**/*.{css,html}",
+		"github-actions-lint": "yamllint .github/workflows/*.yml"
 	},
 	"devDependencies": {
 		"@markuplint/php-parser": "^4.5.1",
@@ -12,6 +13,7 @@
 		"markuplint": "^4.6.1",
 		"postcss-html": "^1.6.0",
 		"prettier": "^2.6.2",
-		"stylelint": "^16.4.0"
+		"stylelint": "^16.4.0",
+		"yaml-lint": "^1.7.0"
 	}
 }
