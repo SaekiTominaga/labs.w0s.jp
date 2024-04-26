@@ -15,7 +15,7 @@ on:
       - '.eslintrc.json'
       - 'package.json'
       - 'public/**/*.js'
-      - 'public/**/*.html
+      - 'public/**/*.html'
   workflow_dispatch:
 
 jobs:
