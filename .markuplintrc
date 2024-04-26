@@ -6,6 +6,12 @@
 		"markuplint:security",
 		"markuplint:rdfa"
 	],
+	"parser": {
+		"\\.php$": "@markuplint/php-parser"
+	},
+	"excludeFiles": [
+		"./public/http/accept/dummy-image.php"
+	],
 	"rules": {
 		"use-list": false
 	},
@@ -27,6 +33,19 @@
 			"rules": {
 				"invalid-attr": false,
 				"no-refer-to-non-existent-id": false
+			}
+		},
+		{
+			"selector": ":has(> template)",
+			"rules": {
+				"permitted-contents": false,
+				"wai-aria": false
+			}
+		},
+		{
+			"selector": "table:has(template)",
+			"rules": {
+				"wai-aria": false
 			}
 		}
 	],
@@ -59,6 +78,11 @@
 		"./public/html/details/index.html": {
 			"rules": {
 				"no-refer-to-non-existent-id": false
+			}
+		},
+		"./public/http/uach/http.php": {
+			"rules": {
+				"required-h1": false
 			}
 		}
 	}

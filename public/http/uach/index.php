@@ -69,7 +69,11 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 			<form>
 				<ul>
 <?php foreach (CHLIST as $ch): ?>
-					<li><label><input type="checkbox" name="ch[]" value="<?= htmlspecialchars($ch) ?>"<?php if (isset($_GET['ch']) && in_array($ch, $_GET['ch'], true)): ?> checked=""<?php endif; ?>/> <?= htmlspecialchars($ch) ?></label></li>
+					<?php if (isset($_GET['ch']) && in_array($ch, $_GET['ch'], true)): ?>
+					<li><label><input type="checkbox" name="ch[]" value="<?= htmlspecialchars($ch) ?>" checked="" /> <?= htmlspecialchars($ch) ?></label></li>
+					<?php else: ?>
+					<li><label><input type="checkbox" name="ch[]" value="<?= htmlspecialchars($ch) ?>" /> <?= htmlspecialchars($ch) ?></label></li>
+					<?php endif; ?>
 <?php endforeach; ?>
 				</ul>
 				<p><button>Set Accept-CH Header</button></p>

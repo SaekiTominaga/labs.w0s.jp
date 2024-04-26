@@ -3,10 +3,11 @@
 	"private": true,
 	"scripts": {
 		"format": "prettier -w .",
-		"html-lint": "markuplint -c .markuplintrc public/**/*.html",
+		"html-lint": "markuplint -c .markuplintrc public/**/*.{html,php}",
 		"css-lint": "stylelint public/**/*.{css,html}"
 	},
 	"devDependencies": {
+		"@markuplint/php-parser": "^4.5.1",
 		"@w0s/stylelint-config": "^4.3.0",
 		"markuplint": "^4.6.1",
 		"postcss-html": "^1.6.0",
