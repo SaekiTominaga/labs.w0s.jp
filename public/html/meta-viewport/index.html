@@ -57,23 +57,6 @@
 					viewportContentMap.set(key, value);
 				}
 
-				const update = (viewportContentMap, updateKey, updateValue) => {
-					if (updateValue === '') {
-						viewportContentMap.delete(updateKey);
-					} else {
-						viewportContentMap.set(updateKey, updateValue);
-					}
-
-					const properties = [];
-					for (const [key, value] of viewportContentMap) {
-						properties.push(`${key}=${value}`);
-					}
-					properties.sort();
-					const viewportNewContent = properties.join(',');
-					viewportElement.content = viewportNewContent;
-					viewportOutputElement.value = viewportNewContent;
-				};
-
 				for (const inputElement of document.querySelectorAll('.form input:not([type="hidden"])')) {
 					inputElement.addEventListener('change', (ev) => {
 						const targetElement = ev.target;

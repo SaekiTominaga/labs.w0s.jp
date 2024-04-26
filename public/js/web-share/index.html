@@ -22,9 +22,7 @@
 					for (const shareButtonElement of document.querySelectorAll('.share-button')) {
 						shareButtonElement.disabled = false; // ボタンを活性化
 						shareButtonElement.addEventListener('click', () => {
-							const shareTitle = shareButtonElement.dataset.shareTitle;
-							const shareText = shareButtonElement.dataset.shareText;
-							const shareUrl = shareButtonElement.dataset.shareUrl;
+							const { shareTitle, shareText, shareUrl } = shareButtonElement.dataset;
 
 							try {
 								navigator.share({

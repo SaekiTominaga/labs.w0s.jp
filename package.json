@@ -5,11 +5,15 @@
 		"format": "prettier -w .",
 		"html-lint": "markuplint -c .markuplintrc public/**/*.{html,php}",
 		"css-lint": "stylelint public/**/*.{css,html}",
+		"js-lint": "eslint public/**/*.{js,html}",
 		"github-actions-lint": "yamllint .github/workflows/*.yml"
 	},
 	"devDependencies": {
 		"@markuplint/php-parser": "^4.5.1",
+		"@w0s/eslint-config": "^5.2.0",
 		"@w0s/stylelint-config": "^4.3.0",
+		"eslint": "^8.57.0",
+		"eslint-plugin-html": "^8.1.1",
 		"markuplint": "^4.6.1",
 		"postcss-html": "^1.6.0",
 		"prettier": "^2.6.2",
