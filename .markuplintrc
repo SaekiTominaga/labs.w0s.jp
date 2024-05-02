@@ -29,13 +29,6 @@
 			}
 		},
 		{
-			"selector": "output",
-			"rules": {
-				"invalid-attr": false,
-				"no-refer-to-non-existent-id": false
-			}
-		},
-		{
 			"selector": ":has(> template)",
 			"rules": {
 				"permitted-contents": false,
