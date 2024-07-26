@@ -4,18 +4,18 @@ on:
     branches:
       - main
     paths:
-      - '.eslintrc.json'
-      - 'package.json'
       - 'public/**/*.js'
       - 'public/**/*.html'
+      - 'eslint.config.js'
+      - 'package.json'
   push:
     branches:
       - main
     paths:
-      - '.eslintrc.json'
-      - 'package.json'
       - 'public/**/*.js'
       - 'public/**/*.html'
+      - 'eslint.config.js'
+      - 'package.json'
   workflow_dispatch:
 
 jobs:

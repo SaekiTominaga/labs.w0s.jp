@@ -1,6 +1,6 @@
 {
 	"name": "labs.w0s.jp",
-	"private": true,
+	"type": "module",
 	"scripts": {
 		"format": "prettier -w .",
 		"html-lint": "markuplint -c .markuplintrc public/**/*.{html,php}",
@@ -10,7 +10,7 @@
 	},
 	"devDependencies": {
 		"@markuplint/php-parser": "^4.6.2",
-		"@w0s/eslint-config": "^5.3.0",
+		"@w0s/eslint-config": "^6.0.2",
 		"@w0s/stylelint-config": "^4.4.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-html": "^8.1.1",
@@ -19,5 +19,6 @@
 		"prettier": "^2.6.2",
 		"stylelint": "^16.5.0",
 		"yaml-lint": "^1.7.0"
-	}
+	},
+	"private": true
 }
