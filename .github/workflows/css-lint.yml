@@ -4,18 +4,18 @@ on:
     branches:
       - main
     paths:
-      - '.stylelintrc.json'
-      - 'package.json'
       - 'public/**/*.css'
       - 'public/**/*.html'
+      - 'package.json'
+      - 'stylelint.config.js'
   push:
     branches:
       - main
     paths:
-      - '.stylelintrc.json'
-      - 'package.json'
       - 'public/**/*.css'
       - 'public/**/*.html'
+      - 'package.json'
+      - 'stylelint.config.js'
   workflow_dispatch:
 
 jobs:
