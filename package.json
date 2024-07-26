@@ -3,18 +3,18 @@
 	"type": "module",
 	"scripts": {
 		"format": "prettier -w .",
-		"html-lint": "markuplint -c .markuplintrc public/**/*.{html,php}",
+		"html-lint": "markuplint public/**/*.{html,php}",
 		"css-lint": "stylelint public/**/*.{css,html}",
 		"js-lint": "eslint public/**/*.{js,html}",
 		"github-actions-lint": "yamllint .github/workflows/*.yml"
 	},
 	"devDependencies": {
-		"@markuplint/php-parser": "^4.6.2",
+		"@markuplint/php-parser": "^4.6.5",
 		"@w0s/eslint-config": "^6.0.2",
 		"@w0s/stylelint-config": "^4.7.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-html": "^8.1.1",
-		"markuplint": "^4.8.1",
+		"markuplint": "^4.9.2",
 		"postcss-html": "^1.7.0",
 		"prettier": "^2.6.2",
 		"stylelint": "^16.7.0",
