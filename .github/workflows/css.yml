@@ -1,4 +1,4 @@
-name: css-lint
+name: CSS files
 on:
   pull_request:
     branches:
@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

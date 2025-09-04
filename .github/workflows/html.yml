@@ -1,25 +1,25 @@
-name: js-lint
+name: HTML files
 on:
   pull_request:
     branches:
       - main
     paths:
-      - 'public/**/*.js'
       - 'public/**/*.html'
-      - 'eslint.config.js'
+      - 'public/**/*.php'
+      - 'markuplint.config.js'
       - 'package.json'
   push:
     branches:
       - main
     paths:
-      - 'public/**/*.js'
       - 'public/**/*.html'
-      - 'eslint.config.js'
+      - 'public/**/*.php'
+      - 'markuplint.config.js'
       - 'package.json'
   workflow_dispatch:
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,4 +27,4 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
-      - run: npm run js-lint
+      - run: npm run html-lint
