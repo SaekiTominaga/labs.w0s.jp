@@ -9,14 +9,6 @@ on:
       - 'public/**/*.php'
       - 'markuplint.config.js'
       - 'package.json'
-  push:
-    branches:
-      - main
-    paths:
-      - 'public/**/*.html'
-      - 'public/**/*.php'
-      - 'markuplint.config.js'
-      - 'package.json'
   workflow_dispatch:
 
 concurrency:

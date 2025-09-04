@@ -9,14 +9,6 @@ on:
       - 'public/**/*.html'
       - 'package.json'
       - 'stylelint.config.js'
-  push:
-    branches:
-      - main
-    paths:
-      - 'public/**/*.css'
-      - 'public/**/*.html'
-      - 'package.json'
-      - 'stylelint.config.js'
   workflow_dispatch:
 
 concurrency:
