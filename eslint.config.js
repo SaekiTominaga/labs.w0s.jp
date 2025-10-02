@@ -1,20 +1,20 @@
 // @ts-check
 
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import { FlatCompat } from '@eslint/eslintrc';
+import { defineConfig } from 'eslint/config';
 import w0sConfig from '@w0s/eslint-config';
+import pluginHtml from 'eslint-plugin-html';
+import globals from 'globals';
 
-const compat = new FlatCompat();
+/** @type {import("eslint").Linter.Config[]} */
+export default defineConfig(
+	w0sConfig,
 
-/** @type {import("@typescript-eslint/utils/ts-eslint").FlatConfig.ConfigArray} */
-export default tseslint.config(
-	...w0sConfig,
-
-	/* Plugins */
-	// @ts-expect-error: ts(2345)
-	...compat.plugins('eslint-plugin-html'),
-
+	{
+		files: ['public/**/*.html'],
+		plugins: {
+			'@html-eslint': pluginHtml,
+		},
+	},
 	{
 		files: ['public/**/*.js', 'public/**/*.html'],
 		languageOptions: {
