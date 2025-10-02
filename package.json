@@ -13,7 +13,7 @@
 		"@w0s/stylelint-config": "^4.7.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-html": "^8.1.1",
-		"globals": "^15.8.0",
+		"globals": "^15.15.0",
 		"markuplint": "^4.9.2",
 		"postcss-html": "^1.7.0",
 		"prettier": "^2.6.2",
