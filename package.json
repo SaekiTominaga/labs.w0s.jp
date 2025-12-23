@@ -3,9 +3,10 @@
 	"type": "module",
 	"scripts": {
 		"format": "prettier -w .",
-		"html-lint": "markuplint public/**/*.{html,php}",
-		"css-lint": "stylelint public/**/*.{css,html}",
-		"js-lint": "eslint public/**/*.{js,html}"
+		"lint": "npm run lint:js && npm run lint:html && npm run lint:css",
+		"lint:html": "markuplint public/**/*.{html,php}",
+		"lint:css": "stylelint public/**/*.{css,html}",
+		"lint:js": "eslint public/**/*.{js,html}"
 	},
 	"devDependencies": {
 		"@markuplint/php-parser": "^4.6.22",
