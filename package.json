@@ -9,7 +9,7 @@
 		"lint:js": "eslint public/**/*.{js,html}"
 	},
 	"devDependencies": {
-		"@markuplint/php-parser": "4.6.22",
+		"@markuplint/php-parser": "4.6.23",
 		"@w0s/eslint-config": "9.4.1",
 		"@w0s/stylelint-config": "4.18.1",
 		"eslint-plugin-html": "8.1.4",
