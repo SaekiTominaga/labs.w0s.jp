@@ -5,7 +5,7 @@
 	"scripts": {
 		"lint": "pnpm run /^lint:.*/",
 		"lint:html": "markuplint public/**/*.{html,php}",
-		"lint:css": "stylelint public/**/*.{css,html}",
+		"lint:css": "stylelint -f verbose public/**/*.{css,html}",
 		"lint:js": "eslint public/**/*.{js,html}"
 	},
 	"devDependencies": {
