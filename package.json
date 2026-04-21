@@ -22,7 +22,7 @@
 		"markuplint": "4.14.1",
 		"postcss-html": "1.8.1",
 		"prettier": "3.8.1",
-		"stylelint": "17.4.0",
+		"stylelint": "17.6.0",
 		"stylelint-attribute-case-sensitivity": "3.0.1",
 		"stylelint-config-concentric-order": "5.5.0",
 		"stylelint-config-standard": "40.0.0",
