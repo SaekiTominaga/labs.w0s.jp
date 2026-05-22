@@ -6,26 +6,29 @@
 		<link rel="stylesheet" href="/labs.css" />
 		<style>
 			.is :is(ol, ul) {
-				background: #fff;
-				list-style: square;
+				background-color: #fff;
+				list-style-type: square;
 				color: #e00;
 			}
 
+			/* stylelint-disable-next-line selector-no-deprecated */
 			.matches :matches(ol, ul) {
-				background: #fff;
-				list-style: square;
+				background-color: #fff;
+				list-style-type: square;
 				color: #e00;
 			}
 
+			/* stylelint-disable-next-line selector-no-deprecated */
 			.webkit-any :-webkit-any(ol, ul) {
-				background: #fff;
-				list-style: square;
+				background-color: #fff;
+				list-style-type: square;
 				color: #e00;
 			}
 
+			/* stylelint-disable-next-line selector-no-deprecated */
 			.moz-any :-moz-any(ol, ul) {
-				background: #fff;
-				list-style: square;
+				background-color: #fff;
+				list-style-type: square;
 				color: #e00;
 			}
 		</style>
@@ -33,15 +36,20 @@
 			document.addEventListener('DOMContentLoaded', () => {
 				try {
 					document.querySelector('.is :is(ol, ul)').style.textDecoration = 'underline';
+					// eslint-disable-next-line no-unused-vars
 				} catch (e) {}
+
 				try {
 					document.querySelector('.matches :matches(ol, ul)').style.textDecoration = 'underline';
+					// eslint-disable-next-line no-unused-vars
 				} catch (e) {}
 				try {
 					document.querySelector('.webkit-any :-webkit-any(ol, ul)').style.textDecoration = 'underline';
+					// eslint-disable-next-line no-unused-vars
 				} catch (e) {}
 				try {
 					document.querySelector('.moz-any :-moz-any(ol, ul)').style.textDecoration = 'underline';
+					// eslint-disable-next-line no-unused-vars
 				} catch (e) {}
 			});
 		</script>
