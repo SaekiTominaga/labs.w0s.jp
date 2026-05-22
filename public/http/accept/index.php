@@ -10,7 +10,7 @@ header('Content-Type: text/html; charset=utf-8');
 		<style>
 			.myaccept {
 				color: #e00;
-				background: #fff;
+				background-color: #fff;
 				font-style: normal;
 			}
 			.myaccept img {
