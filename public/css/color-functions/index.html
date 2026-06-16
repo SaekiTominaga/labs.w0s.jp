@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>CSS color functions</title>
+		<link rel="stylesheet" href="/labs.css" />
+		<style>
+			.functions {
+				font-size: 120%;
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS color functions</h1>
+
+		<p>In supported browsers, the text color will appear red.</p>
+
+		<p>
+			As of June 2026, there is a bug in iOS Firefox and iOS Edge where the background color of <code>lab()</code>, <code>lch()</code>, <code>oklab()</code>,
+			and <code>oklch()</code> turn white when forced dark mode is enabled.
+		</p>
+
+		<ul class="functions">
+			<li><span style="background-color: #fff; color: #f00">HEX</span></li>
+
+			<li>
+				<span style="background-color: hsl(324deg 0% 100%); color: hsl(0deg 100% 50%)"><code>hsl()</code></span>
+			</li>
+			<li>
+				<span style="background-color: hwb(0deg 100% 0%); color: hwb(0deg 0% 0%)"><code>hwb()</code></span>
+			</li>
+			<li>
+				<span style="background-color: rgb(255 255 255); color: rgb(255 0 0)"><code>rgb()</code></span>
+			</li>
+
+			<li>
+				<span style="background-color: lab(100% 0 0); color: lab(53.24% 80.09 67.2)"><code>lab()</code></span>
+			</li>
+			<li>
+				<span style="background-color: lch(100% 0 0deg); color: lch(54.3% 106.83 40.85deg)"><code>lch()</code></span>
+			</li>
+
+			<li>
+				<span style="background-color: oklab(100% 0 0); color: oklab(62.8% 0.2248 0.1258)"><code>oklab()</code></span>
+			</li>
+			<li>
+				<span style="background-color: oklch(100% 0 0deg); color: oklch(62.8% 0.2577 29.23deg)"><code>oklch()</code></span>
+			</li>
+		</ul>
+
+		<footer>
+			<p><a href="../../">Back</a></p>
+		</footer>
+	</body>
+</html>
