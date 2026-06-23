@@ -16,7 +16,7 @@
 		"eslint-plugin-functional": "9.0.5",
 		"eslint-plugin-html": "8.1.4",
 		"eslint-plugin-import": "2.32.0",
-		"eslint-plugin-jsdoc": "63.0.0",
+		"eslint-plugin-jsdoc": "62.9.0",
 		"eslint-plugin-safely-storage": "1.1.0",
 		"globals": "17.6.0",
 		"markuplint": "4.18.3",
@@ -31,5 +31,5 @@
 		"stylelint-root-colors": "3.0.1",
 		"typescript-eslint": "8.59.4"
 	},
-	"packageManager": "pnpm@11.1.2"
+	"packageManager": "pnpm@11.8.0"
 }
