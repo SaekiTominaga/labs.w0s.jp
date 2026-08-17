@@ -24,6 +24,7 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="text-scale" content="scale">
 		<title>User-Agent Client Hints Demo</title>
 		<link rel="stylesheet" href="/labs.css" />
 		<style>
