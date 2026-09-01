@@ -42,22 +42,7 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 				inline-size: 100%;
 			}
 		</style>
-		<script type="module">
-			import uach from './uach.mjs';
-			uach();
-
-			document.addEventListener('DOMContentLoaded', () => {
-				const httpIframeElement = document.getElementById('http-iframe');
-				httpIframeElement.contentWindow.addEventListener('load', (ev) => {
-					const heightPx = ev.target.body.offsetHeight;
-					try {
-						httpIframeElement.attributeStyleMap.set('height', CSS.px(heightPx));
-					} catch(e) {
-						httpIframeElement.style.height = `${heightPx}px`;
-					}
-				});
-			});
-		</script>
+		<script src="index.js" type="module"></script>
 	</head>
 	<body>
 		<h1>User-Agent Client Hints Demo</h1>

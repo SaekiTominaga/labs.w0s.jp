@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"esbenp.prettier-vscode",
+		"github.vscode-github-actions",
+		"stylelint.vscode-stylelint",
+		"yusukehirao.vscode-markuplint"
+	]
+}
