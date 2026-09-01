@@ -10,38 +10,7 @@
 				/* 未対応ブラウザでは `display: none` するなどの対応をしてもいいかもしれません */
 			}
 		</style>
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				document.getElementById('support-share').textContent = navigator.share !== undefined ? '✔ Support' : '✘ No Support';
-				document.getElementById('support-canshare').textContent = navigator.share !== undefined ? '✔ Support' : '✘ No Support';
-			});
-
-			if (navigator.share !== undefined) {
-				/* 未対応ブラウザも多いので判定処理 */
-				document.addEventListener('DOMContentLoaded', () => {
-					const shareErrorMessageElement = document.getElementById('share-error');
-					for (const shareButtonElement of document.querySelectorAll('.share-button')) {
-						shareButtonElement.disabled = false; // ボタンを活性化
-						shareButtonElement.addEventListener('click', () => {
-							const { shareTitle, shareText, shareUrl } = shareButtonElement.dataset;
-
-							try {
-								navigator.share({
-									title: shareTitle !== undefined ? shareTitle : document.title, // 属性が指定されていないときはページタイトル
-									text: shareText,
-									url: shareUrl !== undefined ? shareUrl : document.URL, // 属性が指定されていないときはページURL
-								});
-
-								shareErrorMessageElement.textContent = '';
-							} catch (e) {
-								console.error('Share failed', e);
-								shareErrorMessageElement.textContent = e.message;
-							}
-						});
-					}
-				});
-			}
-		</script>
+		<script src="index.js" type="module"></script>
 	</head>
 	<body>
 		<h1>Web Share API Demo</h1>

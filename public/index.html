@@ -28,10 +28,8 @@
 				flex-grow: 0;
 			}
 		</style>
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				document.getElementById(location.protocol === 'http:' ? 'nav-http' : 'nav-https').removeAttribute('href');
-			});
+		<script type="module">
+			document.querySelector(location.protocol === 'http:' ? '#nav-http' : '#nav-https').removeAttribute('href');
 		</script>
 	</head>
 	<body>
