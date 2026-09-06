@@ -15,8 +15,8 @@ importers:
         specifier: 1.0.7
         version: 1.0.7(oxlint-plugin-safely-storage@1.0.0(@oxlint/plugins@1.80.0)(oxlint@1.80.0(oxlint-tsgolint@7.0.2001)))(oxlint-tsgolint@7.0.2001)(oxlint@1.80.0(oxlint-tsgolint@7.0.2001))
       '@w0s/stylelint-config':
-        specifier: 4.24.0
-        version: 4.24.0(stylelint-attribute-case-sensitivity@3.1.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-concentric-order@5.5.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-standard@40.0.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-no-default-viewport@2.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint-plugin-defensive-css@2.9.6(stylelint@17.14.1(typescript@6.0.3)))(stylelint-root-colors@3.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint@17.14.1(typescript@6.0.3))
+        specifier: 4.25.0
+        version: 4.25.0(stylelint-attribute-case-sensitivity@3.1.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-concentric-order@5.5.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-standard@40.0.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-no-default-viewport@2.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint-plugin-defensive-css@2.9.6(stylelint@17.14.1(typescript@6.0.3)))(stylelint-root-colors@3.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint@17.14.1(typescript@6.0.3))
       markuplint:
         specifier: 4.18.3
         version: 4.18.3(typescript@6.0.3)
@@ -373,15 +373,15 @@ packages:
       oxlint-plugin-safely-storage: ^1.0.0
       oxlint-tsgolint: ^7.0.2001
 
-  '@w0s/stylelint-config@4.24.0':
-    resolution: {integrity: sha512-a0kidIzgX0aJ+MWBuDEAUgHeKFlAaDeLCH7/p3N443OYxRc2E8bD6xlXiuw9l9Rq/Mme3mEmPdmCw1Ru+cutMw==}
+  '@w0s/stylelint-config@4.25.0':
+    resolution: {integrity: sha512-wXruzx9D3rGJ1x9Ur0c1l2htSFbuH7iY7cWW1ebxtwcxQ7elo8ElZi2cbeLOm1xAf9hHlPJBZiFdmdRzOFHuvA==}
     peerDependencies:
       stylelint: ^17.10.0
       stylelint-attribute-case-sensitivity: ^3.0.0
       stylelint-config-concentric-order: ^5.3.0
       stylelint-config-standard: ^40.0.0
       stylelint-no-default-viewport: ^2.0.0
-      stylelint-plugin-defensive-css: ^2.9.3
+      stylelint-plugin-defensive-css: ^2.9.6
       stylelint-root-colors: ^3.0.0
 
   acorn-jsx@5.3.2:
@@ -1450,7 +1450,7 @@ snapshots:
       oxlint-plugin-safely-storage: 1.0.0(@oxlint/plugins@1.80.0)(oxlint@1.80.0(oxlint-tsgolint@7.0.2001))
       oxlint-tsgolint: 7.0.2001
 
-  '@w0s/stylelint-config@4.24.0(stylelint-attribute-case-sensitivity@3.1.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-concentric-order@5.5.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-standard@40.0.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-no-default-viewport@2.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint-plugin-defensive-css@2.9.6(stylelint@17.14.1(typescript@6.0.3)))(stylelint-root-colors@3.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint@17.14.1(typescript@6.0.3))':
+  '@w0s/stylelint-config@4.25.0(stylelint-attribute-case-sensitivity@3.1.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-concentric-order@5.5.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-config-standard@40.0.0(stylelint@17.14.1(typescript@6.0.3)))(stylelint-no-default-viewport@2.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint-plugin-defensive-css@2.9.6(stylelint@17.14.1(typescript@6.0.3)))(stylelint-root-colors@3.0.1(stylelint@17.14.1(typescript@6.0.3)))(stylelint@17.14.1(typescript@6.0.3))':
     dependencies:
       stylelint: 17.14.1(typescript@6.0.3)
       stylelint-attribute-case-sensitivity: 3.1.0(stylelint@17.14.1(typescript@6.0.3))
