@@ -121,7 +121,9 @@ export default {
 			},
 		},
 		'./public/http/uach/http.php': {
-			rules: { 'required-h1': false },
+			rules: {
+				'required-h1': false,
+			},
 		},
 	},
 };
