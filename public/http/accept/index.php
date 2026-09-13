@@ -5,22 +5,25 @@ header('Content-Type: text/html; charset=utf-8');
 <html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<meta name="text-scale" content="scale">
+		<meta name="text-scale" content="scale" />
+
 		<title>Accept Request Header Demo</title>
+
 		<link rel="stylesheet" href="/labs.css" />
+		<link rel="stylesheet" href="dummy-stylesheet.php?link" />
 		<style>
 			.myaccept {
 				color: #e00;
 				background-color: #fff;
 				font-style: normal;
 			}
+
 			.myaccept img {
 				display: block;
 			}
 		</style>
-		<script src="index.js" type="module"></script>
 
-		<link rel="stylesheet" href="dummy-stylesheet.php?link" />
+		<script src="index.js" type="module"></script>
 		<script src="dummy-script.php?script"></script>
 	</head>
 	<body>

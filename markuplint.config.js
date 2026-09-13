@@ -6,17 +6,36 @@ export default {
 	},
 	excludeFiles: ['./public/http/accept/dummy-image.php'],
 	rules: {
-		'use-list': false,
+		'head-element-order': [
+			'meta[http-equiv="content-type" i]',
+			'meta[charset]',
+			'meta[http-equiv]',
+			'meta[name]',
+			'base',
+			'title',
+			'link[rel="preconnect" i]',
+			'link[rel~="stylesheet" i]',
+			'style',
+			'link[rel="preload" i]',
+			'link[rel="modulepreload" i]',
+			'link[rel="prefetch" i]',
+			'link[rel="dns-prefetch" i]',
+			'link',
+			'script[src]',
+			'script',
+			'meta',
+		],
+		'no-pseudo-list': false,
 	},
 	nodeRules: [
 		{
 			selector: 'head',
 			rules: {
-				'required-element': false,
+				'require-element': false,
 			},
 		},
 		{
-			selector: 'table, input[type=submit], input[type=button], input[type=reset], datalist, datalist > option, dialog',
+			selector: 'datalist, datalist > option',
 			rules: {
 				'require-accessible-name': false,
 			},
@@ -24,51 +43,81 @@ export default {
 		{
 			selector: ':has(> template)',
 			rules: {
-				'permitted-contents': false,
-				'wai-aria': false,
+				'require-owned-elements': false,
 			},
 		},
 		{
-			selector: 'table:has(template)',
+			selector: 'table:has(> tbody > template)',
 			rules: {
-				'wai-aria': false,
+				'require-owned-elements': false,
+			},
+		},
+		{
+			selector: 'tbody:has(> template)',
+			rules: {
+				'permitted-contents': false,
 			},
 		},
 	],
 	overrides: {
-		'./public/html/iframe/frame.html': {
-			rules: {
-				'required-h1': false,
-			},
-		},
 		'./public/html/meta-ogimage/emptyalt.html': {
-			rules: {
-				'invalid-attr': false,
-			},
+			nodeRules: [
+				{
+					selector: 'meta[property="og:image:alt"]',
+					rules: {
+						'no-invalid-attr-value': false,
+					},
+				},
+			],
 		},
 		'./public/html/object-image-alt/index.html': {
-			rules: {
-				'require-accessible-name': false,
-			},
+			nodeRules: [
+				{
+					selector: 'object[role="img"]',
+					rules: {
+						'require-accessible-name': false,
+					},
+				},
+			],
+		},
+		'./public/html/ogp-charset/meta-charset-shiftjis-within1024.html': {
+			nodeRules: [
+				{
+					selector: 'meta[charset]',
+					rules: {
+						'no-invalid-attr-value': false,
+					},
+				},
+			],
 		},
 		'./public/html/ogp-charset/meta-charset-shiftjis-without1024.html': {
 			rules: {
-				'invalid-attr': false,
+				'meta-charset-position': false,
 			},
 		},
-		'./public/html/ogp-charset/meta-charset-shiftjis-within1024.html': {
+		'./public/html/ogp-charset/meta-charset-utf8-without1024.html': {
 			rules: {
-				'invalid-attr': false,
+				'meta-charset-position': false,
 			},
 		},
-		'./public/html/details/index.html': {
+		'./public/html/ogp-charset/meta-httpequiv-shiftjis-within1024.html': {
+			nodeRules: [
+				{
+					selector: 'meta[http-equiv="Content-Type" i]',
+					rules: {
+						'no-invalid-attr-value': false,
+					},
+				},
+			],
+		},
+		'./public/html/ogp-charset/meta-httpequiv-shiftjis-without1024.html': {
 			rules: {
-				'no-refer-to-non-existent-id': false,
+				'meta-charset-position': false,
 			},
 		},
-		'./public/http/uach/http.php': {
+		'./public/html/ogp-charset/meta-httpequiv-utf8-without1024.html': {
 			rules: {
-				'required-h1': false,
+				'meta-charset-position': false,
 			},
 		},
 	},
