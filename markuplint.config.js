@@ -120,5 +120,8 @@ export default {
 				'meta-charset-position': false,
 			},
 		},
+		'./public/http/uach/http.php': {
+			rules: { 'required-h1': false },
+		},
 	},
 };
