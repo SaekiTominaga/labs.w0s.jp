@@ -10,7 +10,7 @@
 	},
 	"devDependencies": {
 		"@markuplint/php-parser": "=5.0.0",
-		"@w0s/oxlint-config": "=1.0.7",
+		"@w0s/oxlint-config": "=1.0.9",
 		"@w0s/stylelint-config": "=4.25.0",
 		"markuplint": "=5.0.0",
 		"oxlint": "=1.80.0",
