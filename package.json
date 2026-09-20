@@ -13,7 +13,7 @@
 		"@w0s/oxlint-config": "=1.0.9",
 		"@w0s/stylelint-config": "=4.25.0",
 		"markuplint": "=5.0.0",
-		"oxlint": "=1.80.0",
+		"oxlint": "=1.82.0",
 		"oxlint-plugin-safely-storage": "=1.0.0",
 		"postcss-html": "=2.0.0",
 		"prettier": "=3.9.6",
