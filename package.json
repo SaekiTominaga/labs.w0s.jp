@@ -23,7 +23,7 @@
 		"stylelint-config-standard": "=40.0.0",
 		"stylelint-no-default-viewport": "=2.0.2",
 		"stylelint-plugin-logical-css": "=2.1.0",
-		"stylelint-root-colors": "=3.0.1"
+		"stylelint-root-colors": "=3.0.2"
 	},
 	"packageManager": "pnpm@12.3.4"
 }
