@@ -9,7 +9,7 @@
 		"lint:js": "oxlint"
 	},
 	"devDependencies": {
-		"@markuplint/php-parser": "=5.0.0",
+		"@markuplint/php-parser": "=5.0.1",
 		"@w0s/oxlint-config": "=1.0.9",
 		"@w0s/stylelint-config": "=4.25.0",
 		"markuplint": "=5.0.0",
