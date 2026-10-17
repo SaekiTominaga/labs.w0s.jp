@@ -23,7 +23,7 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="viewport" content="width=device-width" />
 		<meta name="text-scale" content="scale" />
 
 		<title>User-Agent Client Hints Demo</title>
@@ -44,6 +44,7 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 				inline-size: 100%;
 			}
 		</style>
+
 		<script src="index.js" type="module"></script>
 	</head>
 	<body>
