@@ -23,6 +23,8 @@ header('Content-Type: text/html; charset=utf-8');
 			}
 		</style>
 
+		<link rel="icon" href="data:," />
+
 		<script src="index.js" type="module"></script>
 		<script src="dummy-script.php?script"></script>
 	</head>

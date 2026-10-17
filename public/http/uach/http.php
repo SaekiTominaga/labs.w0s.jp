@@ -16,6 +16,8 @@ header('X-Robots-Tag: noindex');
 				margin: 0;
 			}
 		</style>
+
+		<link rel="icon" href="data:," />
 	</head>
 	<body>
 		<table>
