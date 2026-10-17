@@ -45,6 +45,8 @@ header('Accept-CH: '. implode(', ', $acceptChHeaderValue));
 			}
 		</style>
 
+		<link rel="icon" href="data:," />
+
 		<script src="index.js" type="module"></script>
 	</head>
 	<body>
