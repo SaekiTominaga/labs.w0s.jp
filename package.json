@@ -25,5 +25,5 @@
 		"stylelint-plugin-logical-css": "=2.1.0",
 		"stylelint-root-colors": "=3.0.3"
 	},
-	"packageManager": "pnpm@12.3.4"
+	"packageManager": "pnpm@12.16.1"
 }
