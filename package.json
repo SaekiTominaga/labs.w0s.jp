@@ -3,6 +3,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
+		"dev": "httpd",
 		"lint": "pnpm run /^lint:.*/",
 		"lint:html": "markuplint \"public/**/*.{html,php}\"",
 		"lint:css": "stylelint -f verbose \"public/**/*.{css,html}\"",
